@@ -1,0 +1,44 @@
+.header{
+    z-index: 4 !important;
+}
+.Services{
+    color:rgb(235, 184, 184) !important;
+}
+
+
+.dropdown-menu{
+position: absolute;
+z-index: 3;
+}
+.dropdown-menu a:focus, .dropdown-menu a:active {
+    outline: none;
+    color: rgb(235, 184, 184); 
+    background-color: transparent;
+    box-shadow: none; 
+}
+body{
+    color: white;
+}
+.row{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card{
+    padding: 0%;
+    gap: 5rem;
+    width: 240px;
+    border-radius: 20px;
+
+}
+.card:hover{
+   transform: scale(1.05);
+}
+
+.card img{
+    width: 100%;
+    border-radius: 20px;
+    
+
+}

@@ -1,0 +1,119 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+img{
+    width: 100%;
+}
+body{
+    color:#333333;
+}
+.header .navbar-brand {
+    padding: 0;
+    z-index: 3;}
+
+.header .navbar .navbar-brand img{
+    max-width: 4rem;
+    padding-left: 10px;
+}
+.header{
+    background-color:transparent;
+    position: relative;
+    padding: 1rem 0 1rem 0;
+    z-index: 2;
+}
+.navbar-expand-lg{
+    padding: 0;
+}
+.header .navbar-toggler{
+    background-color:white;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+.header .navbar .navbar-nav li a{
+    color: rgb(225, 225, 237);
+    gap: 1rem;
+}
+/* .header .navbar .navbar-nav .home{
+    color:rgb(235, 184, 184) !important;
+
+} */
+
+.header .navbar .navbar-nav li a:hover{
+    color:white;
+    transition: color var(--transition);
+}
+.header .dropdown-menu li a{
+    color: black !important;
+}
+.header .dropdown-menu{
+    background-color: rgb(225, 225, 237);
+    padding: 1rem;
+    width: 196px;
+    border-radius: 15px;
+}
+.header .dropdown-menu li a:hover {
+    color: gold !important;
+    border-radius: 25px;
+}
+
+/* ------------------------------------ */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1;
+}
+.hero-section{
+    position: relative;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.footer-box{
+    background-color:transparent;
+    width: 100%;
+    height: 10vh;
+}
+.dropdown-menu a:focus, .dropdown-menu a:active {
+    outline: none;
+    color: rgb(235, 184, 184); 
+    background-color: transparent; 
+    box-shadow: none; 
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+.i-box{
+    color: white;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-transform: capitalize;
+}
+.i-boxx{
+    margin-top: 3rem;
+}
+.i-box-content{
+    margin-bottom: 3rem;
+}
+.i-box-video {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%; /* العرض يكون 100% بالنسبة للحاوية */
+    aspect-ratio: 16 / 9; /* لضبط الفيديو بنسبة 16:9 الشهيرة */
+    position: relative; /* تأكيد على أن المحتوى يتكيف بشكل صحيح */
+}
+
+.responsive-frame {
+    width: 100%;
+    height: 100%;
+    border: 0; /* إزالة الحدود */
+}
+body {
+    background: linear-gradient(to right, #000000, #1e3b70);
+}

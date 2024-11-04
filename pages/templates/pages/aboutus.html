@@ -1,0 +1,149 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aboutus.css' %}">
+    <style>
+        @media (min-width: 992px) {
+            .navbar .navbar-collapse {
+                order: 2;
+            }
+            .navbar .small-icon {
+                order: 3;
+            }
+            .navbar-toggler {
+                order: 1;
+            }
+            .header .small-icon svg {
+                padding-right: 20px;
+                font-size: 2.9rem;
+                position: absolute;
+                top: 0.8rem;
+            }
+            .header .navbar .navbar-brand img {
+                transform: translateY(-0.5rem);
+                max-width: 7rem;
+            }
+            .header .navbar .navbar-nav {
+                font-size: large;
+                gap: 1.5rem;
+            }
+            .content {
+                width: 90%;
+            }
+        }
+        @media (max-width: 991px) {
+            .navbar .navbar-collapse {
+                order: 2;
+                width: 100%;
+            }
+            .navbar .small-icon {
+                order: 3;
+            }
+            .navbar-toggler {
+                order: 1;
+                margin-left: auto;
+            }
+            .header .small-icon svg {
+                right: 80px;
+            }
+            .content {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header sticky-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    <img src="{% static 'imags/Masters_1_-removebg.png' %}" alt="Acu Masters Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{% url 'aboutus' %}">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href={% url 'event-list' %}>Events</a></li>
+                                <li><a class="dropdown-item" href={% url 'iti' %}>ITI Materials</a></li>
+                                <li><a class="dropdown-item" href={% url 'sessions' %}>Sessions</a></li>
+                                <li><a class="dropdown-item" href={% url 'roadmaps' %}>Roadmaps</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{% url 'contact_us' %}">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div class="first">
+            <h3>Welcome to Acu Masters!</h3>
+            <p>At Acu Masters, we are more than just a group of tech enthusiasts; we are a vibrant community of individuals passionate about all things computer science. Our mission is to foster a collaborative environment where innovation, learning, and growth are at the forefront.</p>
+        </div>
+        <div class="second">
+            <div class="second-img">
+                <img src="{% static 'imags/feature-icon-1.png' %}" alt="Who We Are">
+            </div>
+            <div class="second-content">
+                <h4>Who We Are</h4>
+                <p>Founded in 2024, Acu Masters brings together students, professionals, and hobbyists from all corners of the computer science field. Whether you’re a seasoned developer, an aspiring data scientist, or just someone who loves coding, our community offers a space to share knowledge, collaborate on projects, and stay up-to-date with the latest industry trends.</p>
+            </div>
+        </div>
+        <div class="second">
+            <div class="second-img">
+                <img src="{% static 'imags/course-category-icon-2-w.png' %}" alt="Our Vision">
+            </div>
+            <div class="second-content">
+                <h4>Our Vision</h4>
+                <p>Our vision is to create an inclusive and dynamic community that supports continuous learning and professional development. We believe in the power of community-driven knowledge and strive to provide resources and opportunities that empower our members to excel in their careers and personal projects.</p>
+            </div>
+        </div>
+        <div class="second">
+            <div class="second-img">
+                <img src="{% static 'imags/course-category-icon-6-w.png' %}" alt="What We Offer">
+            </div>
+            <div class="second-content">
+                <h4>What We Offer</h4>
+                <p>1. Educational Resources: Access a wealth of resources, including tutorials, articles, and courses, designed to help you enhance your skills and knowledge in computer science.</p>
+                <p>2. Networking Opportunities: Connect with like-minded individuals, industry professionals, and potential collaborators through our events, forums, and social media channels.</p>
+                <p>3. Projects and Challenges: Participate in exciting projects and coding challenges that push the boundaries of technology and creativity.</p>
+                <p>4. Events and Meetups: Join us for regular meetups, workshops, and seminars where you can learn from experts and engage in meaningful discussions.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-box">
+            <!-- Optional Footer Content -->
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/joo.js' %}"></script>
+</body>
+</html>

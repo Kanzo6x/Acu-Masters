@@ -1,0 +1,144 @@
+.header .navbar .navbar-nav .contact {
+    color: rgb(235, 184, 184) !important;
+}
+
+.fa-facebook, .fa-linkedin, .fa-whatsapp ,.fa-instagram{
+    font-size: 2.5rem; 
+    margin: 0 0.5rem; 
+    color: white; 
+    text-decoration: none;
+}
+
+.fa-facebook:hover, .fa-linkedin:hover,.fa-instagram:hover, .fa-whatsapp:hover {
+    color: rgb(235, 184, 184); /* توحيد لون الهوفر لجميع الأيقونات */
+}
+
+.hero-box h1 {
+    text-align: center;
+    width: 100%;
+    font-weight: 700;   
+}
+
+.hero-box-content {
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    gap: 30px;
+    font-weight: 900;   
+}
+
+.zl-box-s i:hover {
+    color: #007bff; 
+}
+
+.zl-box-s a {
+    text-decoration: none; 
+    outline: none; 
+}
+.card a {
+    text-decoration: none; 
+    outline: none; 
+}
+
+.zl-box-s a:focus {
+    outline: none;  
+}
+
+.dropdown-menu a:focus, .dropdown-menu a:active {
+    outline: none;
+    color: rgb(235, 184, 184); 
+    background-color: transparent; 
+    box-shadow: none; 
+}
+
+body {
+    background: linear-gradient(to right, #000000, #1e3b70);
+}
+
+.bo {
+    margin-top: 4rem;
+}
+
+.bo h1 {
+    text-align: center;
+    color: white;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 20%;
+    height: 200px;
+    background: linear-gradient(135deg, #243b55, #141e30);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: 1s;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.card:hover {
+    width: 250px;
+    height: 320px;
+    background: linear-gradient(135deg, #243b55, #141e30); /* تثبيت اللون */
+}
+
+.card-img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.card-img, .card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.link {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 320px;
+    text-align: center;
+    background: linear-gradient(135deg, #243b55, #141e30); /* نفس لون الكارد */
+    border-radius: 10px;
+}
+
+.link img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.card:hover .link {
+    display: block;
+    border: none;
+}
+
+.zl-box {
+    color: white;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.zl-box h1 {
+    margin-top: 5rem;
+    font-size: 3.5rem;
+}
+
