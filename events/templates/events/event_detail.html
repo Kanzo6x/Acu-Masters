@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ event.name }}</title>
+    <!-- Django static files -->
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sess.css' %}">
+    <link rel="stylesheet" href="{% static 'css/oriantation.css' %}">
+
+    <style>
+        @media (min-width: 992px) {
+            .navbar .navbar-collapse { order: 2; }
+            .navbar .small-icon { order: 3; }
+            .navbar-toggler { order: 1; }
+            .header .small-icon svg {
+                padding-right: 20px;
+                font-size: 2.9rem;
+                position: absolute;
+                top: 0.8rem;
+            }
+            .navbar-brand { height: 13vh; }
+            .header .navbar .navbar-brand img {
+                transform: translateY(-0.5rem);
+                max-width: 7rem;
+            }
+            .header .navbar .navbar-nav {
+                font-size: large;
+                gap: 1.5rem;
+            }
+            .i-box-video { width: 75%; }
+        }
+        
+        @media (max-width: 991px) {
+            .navbar .navbar-collapse { order: 2; width: 100%; }
+            .navbar .small-icon { order: 3; }
+            .navbar-toggler { order: 1; margin-left: auto; }
+            .header { padding: 0.5rem 0; }
+            .header .small-icon svg { right: 80px; }
+            .carousel { width: 600px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header sticky-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand order-0" href="{% url 'home' %}">
+                    <img src="{% static 'imags/Masters_1_-removebg.png' %}" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="{% url 'aboutus' %}">About Us</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{% url 'event-list' %}">Events</a></li>
+                                <li><a class="dropdown-item" href="{% url 'iti' %}">ITI Materials</a></li>
+                                <li><a class="dropdown-item" href="{% url 'sessions' %}">Sessions</a></li>
+                                <li><a class="dropdown-item" href="{% url 'roadmaps' %}">Roadmaps</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link active" href="{% url 'contact_us' %}">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero-section autoplay muted loop">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+            <div class="carousel-indicators">
+                {% for photo in event.photos.all %}
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}" aria-label="Slide {{ forloop.counter }}"></button>
+                {% endfor %}
+            </div>
+            <div class="carousel-inner">
+                {% for photo in event.photos.all %}
+                    <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                        <img src="{{ photo.photo.url }}" class="d-block w-100" alt="Event photo">
+                    </div>
+                {% endfor %}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="text">
+            {% if event.video %}
+                <h1>{{ event.name }} Video</h1>
+                <video id="myVideo" src="{{ event.video.url }}" width="600" controls></video>
+                <script>
+                    const video = document.getElementById('myVideo');
+                    video.addEventListener('click', function() {
+                        if (video.paused) {
+                            video.play(); 
+                        } else {
+                            video.pause();
+                        }
+                    });
+                </script>
+            {% endif %}
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/joo.js' %}"></script>
+</body>
+</html>
