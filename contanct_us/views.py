@@ -13,7 +13,7 @@ def show_cards(request):
         headings = members.objects.filter(is_heading = True)
         teams = []
         for i in range(1, 6 , 1):
-            query = members.objects.filter(team_code = i)
+            query = members.objects.filter(team_code=i).exclude(id__in=headings.values_list('id', flat=True))
             if query:
                 for member in query:
                     member.team_name = team_codes.get(member.team_code , "Teams")
