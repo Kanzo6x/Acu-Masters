@@ -153,112 +153,37 @@
         </header>
 </head>
 <body>
-         <div class="zl-box">
-            <h1>Feel Free To Contact US!</h1>
-            <div class="zl-box-content">
+    <div class="hero-section autoplay muted loop">
+        <!-- خلفية الفيديو -->
+        <!-- <video class="video-background" autoplay muted loop>
+            <source src="imags/video.mp4" type="video/mp4">
+            متصفحك لا يدعم تشغيل الفيديو.
+        </video> -->
+        <div class="hero-box">
+            <div class="hero-box-img">
+                <img src="{% static 'imags/Masters_1_-removebg.png' %}" alt="">
+            </div>
+            <div class="hero-box-content">
+                <h1>Feel Free To Contact US!</h1>
                 <h3>Our Social Media</h3>
-                <div class="zl-box-s">
+                <div class="hero-box-s">
                     <a href="https://www.facebook.com/profile.php?id=61564973589399&mibextid=LQQJ4d">
-                        <i class="fa-brands fa-facebook"></i> </a>
-                    
-                    <a href="https://www.linkedin.com/in/acu-masters-community-659a2b335/">
-                        <i class="fa-brands fa-linkedin"></i>                    </a>
-                    
-                    <a href="https://chat.whatsapp.com/BtoyeC5io8ZF40tfcTUGoT">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a> 
-                    <a href="https://www.instagram.com/acu.masters?igsh=NW00cmk4dWJxMXFu">
-                        <i class="fa-brands fa-instagram"></i>                    </a> 
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/acu.master/profilecard/?igsh=MWtqcTJjMG04OGc3YQ==">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+
                 </div>
             </div>
             
-            
-            
-            
-        </div> 
-        <div class="bo">
-            <h1>Meet Our Team</h1>
-            <div class="cards">
-                {% for heading in headings %}
-                <div class="card">
-                <div class="card-img">
-                    <img src={{ heading.image.url }} alt="member image">
-                </div>
-                <div class="card-content">
-                    <h4>{{ heading.name }}</h4>
-                    <h4>{{ heading.team_name }}</h4>
-                    
-                    <div class="link">
-                      <img src={{ heading.image.url }} alt="">
-                      <h3>{{ heading.name }}</h3>
-                      <h3>{{ heading.team_name }}</h3>
-                      <p>{{ heading.description }}</p>
-      
-                      <div class="hero-box-s">
-                          <a href={{ heading.facebook_link }}>
-                              <i class="fa-brands fa-facebook"></i> </a>
-                          
-                          <a href={{ heading.linkedin_link }}>
-                              <i class="fa-brands fa-linkedin"></i>
-                          </a>
-                          
-                          <a href="https://chat.whatsapp.com/BtoyeC5io8ZF40tfcTUGoT">
-                              <i class="fa-brands fa-whatsapp"></i>
-                          </a>
-                          
-                        </div>
-                    </div>
-                </div>
-                </div>
-                    {% endfor %}
-                    {% for team in teams %}
-                      {% for member in team %}
-                      <div class="card">
-                          <div class="card-img">
-                              <img src="{{ member.image.url }}" alt="member image">
-                          </div>
-                          <div class="card-content">
-                              <h4>{{ member.name }}</h4>
-                              <h4>{{ member.team_name }}</h4>
-                              
-                              <div class="link">
-                                  <img src="{{ member.image.url }}" alt="">
-                                  <h3>{{ member.name }}</h3>
-                                  <h3>{{ member.team_name }}</h3>
-                                  <p>{{ member.description }}</p>
-                                  
-                                  <div class="hero-box-s">
-                                      <a href="{{ member.facebook_link }}">
-                                          <i class="fa-brands fa-facebook"></i>
-                                      </a>
-                                      
-                                      <a href="{{ member.linkedin_link }}">
-                                          <i class="fa-brands fa-linkedin"></i>
-                                      </a>
-                                      
-                                      <a href="https://chat.whatsapp.com/BtoyeC5io8ZF40tfcTUGoT">
-                                          <i class="fa-brands fa-whatsapp"></i>
-                                      </a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div> 
-                      {% endfor %} 
-                  {% endfor %} 
-                
-                
-                
-                
-                
-                
-        </div>
-
+             
           
-       
+        </div>
+        <div class="footer-box"></div>
     </div>
-
-
-
 
 
 

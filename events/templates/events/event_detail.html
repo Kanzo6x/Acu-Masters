@@ -41,7 +41,7 @@
             .navbar-toggler { order: 1; margin-left: auto; }
             .header { padding: 0.5rem 0; }
             .header .small-icon svg { right: 80px; }
-            .carousel { width: 600px; }
+            .carousel { width: 98%; }
         }
     </style>
 </head>
@@ -101,9 +101,10 @@
         </div>
 
         <div class="text">
-            {% if event.video %}
                 <h1>{{ event.name }} Video</h1>
-                <video id="myVideo" src="{{ event.video.url }}" width="600" controls></video>
+                <div class="gooo">
+                    <iframe class="video-container" src="{{ event.link }}" width="600" height="400" frameborder="0" allowfullscreen></iframe>
+                </div>
                 <script>
                     const video = document.getElementById('myVideo');
                     video.addEventListener('click', function() {
@@ -114,7 +115,6 @@
                         }
                     });
                 </script>
-            {% endif %}
         </div>
     </div>
 

@@ -7,6 +7,7 @@ img{
 }
 body{
     color:#333333;
+    background: linear-gradient(to right, #000000, #1e3b70);
 }
 .header .navbar-brand {
     padding: 0;
