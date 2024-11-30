@@ -32,3 +32,12 @@
 body{
     background: linear-gradient(to right, #000000, #1e3b70);
 }
+html, body {
+    overflow: auto; /* Allow scrolling */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+html::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+}
