@@ -45,3 +45,13 @@ body{
 .first-box{
     margin-top: 2rem;
 }
+
+html, body {
+    overflow: auto; /* Allow scrolling */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+html::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+}
